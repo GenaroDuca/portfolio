@@ -1,0 +1,205 @@
+/* Variables de color */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --primary-accent: #a855f7;
+  --electric-purple: #bc13fe;
+  --deep-violet: #2e1065;
+  --bg-dark: #0f0720;
+  --text-color: #bab8bf;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: white;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* El contenedor del fondo */
+.background-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -10;
+  background-color: var(--bg-dark);
+}
+
+/* Efecto de resplandor (Glow) */
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.glow-1 {
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--deep-violet);
+  opacity: 0.6;
+}
+
+.glow-2 {
+  top: 20%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: #581c87;
+  opacity: 0.4;
+}
+
+.glow-3 {
+  bottom: 10%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: #701a75;
+  opacity: 0.3;
+}
+
+.glow-4 {
+  bottom: -5%;
+  right: 20%;
+  width: 550px;
+  height: 550px;
+  background: #312e81; 
+  opacity: 0.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.header nav a:hover {
+  color: var(--primary-accent);
+}
+
+/* About */
+.about {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 90px 60px;
+  color: var(--text-color);
+  margin-top: 120px;
+}
+
+.about img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.about div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about div:last-child div:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.about div:last-child div:last-child button {
+  padding: 20px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.about div:last-child div:last-child button:first-child {
+  background-color: var(--electric-purple);
+  border: 1.5px solid var(--electric-purple);
+  box-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
+}
+
+.about div:last-child div:last-child button:first-child:hover {
+  transform: translateY(-2px);
+
+}
+
+.about div:last-child div:last-child button:last-child {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.about div:last-child div:last-child button:last-child:hover {
+  transform: translateY(-2px);
+}
+
+/* Background */
+.background {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  color: var(--text-color);
+}
+
+.background div {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; 
+}
+
+.background div p {
+  flex: 1;
+  text-align: left;
+  line-height: 1.5;
+}
+
+  
