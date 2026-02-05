@@ -19,7 +19,11 @@
   --electric-purple: #bc13fe;
   --deep-violet: #2e1065;
   --bg-dark: #0f0720;
-  --text-color: #bab8bf;
+
+  /* Theme Variables Default (Dark) */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.05);
 }
 
 html {
@@ -28,10 +32,30 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--bg-dark);
-  color: white;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+}
+
+body.light {
+  --bg-color: #f0f0f0;
+  --text-color: #333333;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --input-bg: rgba(88, 88, 88, 0.05);
+  --icon-color: #333333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --bg-color: #0f0720;
+  --text-color: #bab8bf;
+  --icon-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Scroll To Top Button */
@@ -88,7 +112,7 @@ a {
   pointer-events: none;
   overflow: hidden;
   z-index: -10;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-color);
 }
 
 /* Efecto de resplandor (Glow) */
@@ -141,10 +165,10 @@ main {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid var(--card-border);
   border-radius: 20px;
   padding: 20px;
 }
@@ -165,8 +189,7 @@ main {
   color: var(--text-color);
 }
 
-
-.header-button:hover:last-child {
+.header-button:hover {
   color: var(--primary-accent);
 }
 
@@ -205,7 +228,7 @@ main {
   height: 400px;
   object-fit: cover;
   border-radius: 20px;
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid var(--card-border);
 }
 
 .about div:last-child {
@@ -224,11 +247,15 @@ main {
   padding: 20px 40px;
   border-radius: 30px;
   cursor: pointer;
-  color: white;
   font-size: 14px;
 }
 
-.about div:last-child div:last-child button a {
+.about div:last-child div:last-child button:nth-child(2) a {
+  text-decoration: none;
+  color: var(--icon-color);
+}
+
+.about div:last-child div:last-child button:first-child a {
   text-decoration: none;
   color: white;
 }
@@ -244,10 +271,10 @@ main {
 }
 
 .about div:last-child div:last-child button:last-child {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border: 1.5px solid var(--card-border);
 }
 
 .about div:last-child div:last-child button:last-child:hover {
@@ -333,8 +360,8 @@ main {
   width: 100%;
   padding: 20px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--input-bg);
+  border: 1.5px solid var(--card-border);
   color: var(--text-color);
   margin: 20px 0;
 }
@@ -378,9 +405,9 @@ main {
 .contact-form form button {
   padding: 20px 40px;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  color: var(--text-color);
   cursor: pointer;
 }
 
@@ -395,7 +422,7 @@ main {
 }
 
 .social-icons a {
-  color: white;
+  color: var(--icon-color);
 }
 
 .social-icons svg {
@@ -433,4 +460,8 @@ main {
   gap: 10px;
   justify-content: space-between;
   height: 130px;
+}
+
+.skill svg {
+  color: var(--icon-color);
 }

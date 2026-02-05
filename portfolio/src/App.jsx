@@ -2,16 +2,18 @@ import { Toaster, toast } from "react-hot-toast";
 
 import "./App.css";
 
-import Header from "./components/header";
-import About from "./components/about";
-import Background from "./components/background";
-import Project from "./components/project";
+import Header from "./components/Header";
+import About from "./components/About";
+import Background from "./components/Background";
+import Project from "./components/Project";
 import MouseFollower from "./components/MouseFollower";
-import ContactForm from "./components/contactForm";
+import ContactForm from "./components/ContactForm";
 import Skill from "./components/Skill";
 import ScrollToTop from "./components/ScrollToTop";
-import NightMode from "./components/nightMode";
-import ChangeLanguage from "./components/changelanguage";
+import NightMode from "./components/NightMode";
+import ChangeLanguage from "./components/ChangeLanguage";
+
+import { ThemeProvider } from "./context/ThemeContext";
 
 import ina from "./assets/ina.png";
 
@@ -31,100 +33,131 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 
 function App() {
+  // const { isDark } = useContext(ThemeContext); // Removed: App is outside the provider
+
   return (
     <>
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          className: "",
-          style: {
-            border: "1.5px solid rgba(255, 255, 255, 0.1)",
-            padding: "20px",
-            color: "var(--text-color)",
-            background: "rgba(255, 255, 255, 0.05)",
-            borderRadius: "30px",
-            backdropFilter: "blur(10px)",
-          },
-        }}
-      />
+      <ThemeProvider>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            className: "",
+            style: {
+              border: "1.5px solid var(--card-border)",
+              padding: "20px",
+              color: "var(--text-color)",
+              background: "var(--card-bg)",
+              borderRadius: "30px",
+              backdropFilter: "blur(10px)",
+            },
+          }}
+        />
 
-      {/* CAPA DEL FONDO DE COLORES */}
-      <div className="background-wrapper">
-        <div className="bg-glow glow-1"></div>
-        <div className="bg-glow glow-2"></div>
-        <div className="bg-glow glow-3"></div>
-        <div className="bg-glow glow-4"></div>
-      </div>
-
-      <MouseFollower />
-      <ScrollToTop />
-
-      {/* CONTENIDO PORTFOLIO */}
-      <main>
-        <Header />
-        <div className="header-buttons">
-          <NightMode />
-          <ChangeLanguage />
+        {/* CAPA DEL FONDO DE COLORES */}
+        <div className="background-wrapper">
+          <div className="bg-glow glow-1"></div>
+          <div className="bg-glow glow-2"></div>
+          <div className="bg-glow glow-3"></div>
+          <div className="bg-glow glow-4"></div>
         </div>
 
-        <h1 className="section-title" id="about">
-          About Me
-        </h1>
-        <About />
+        <MouseFollower />
+        <ScrollToTop />
 
-        <Background />
-
-        <h1 className="section-title" id="skills">
-          Tech Stack
-        </h1>
-        <div className="skills-container">
-          <p>Frontend Development</p>
-          <div className="skills-grid">
-            <Skill icon={<FaReact size={45} />} title="React" />
-            <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
-            <Skill icon={<FaHtml5 size={50} />} title="HTML5" />
-            <Skill icon={<FaCss3Alt size={50} />} title="CSS3" />
+        {/* CONTENIDO PORTFOLIO */}
+        <main>
+          <Header />
+          <div className="header-buttons">
+            <NightMode />
+            <ChangeLanguage />
           </div>
 
-          <p>Backend Development</p>
-          <div className="skills-grid">
-            <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
-            <Skill icon={<SiNestjs size={45} />} title="NestJS" />
-            <Skill icon={<SiMongodb size={45} />} title="MongoDB" />
-            <Skill icon={<PiFileSql size={50} />} title="MySql & PostgreSQL" />
+          <h1 className="section-title" id="about">
+            About Me
+          </h1>
+          <About />
+
+          <Background />
+
+          <h1 className="section-title" id="skills">
+            Tech Stack
+          </h1>
+          <div className="skills-container">
+            <p>Frontend Development</p>
+            <div className="skills-grid">
+              <Skill icon={<FaReact size={45} />} title="React" />
+              <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
+              <Skill icon={<FaHtml5 size={50} />} title="HTML5" />
+              <Skill icon={<FaCss3Alt size={50} />} title="CSS3" />
+            </div>
+
+            <p>Backend Development</p>
+            <div className="skills-grid">
+              <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
+              <Skill icon={<SiNestjs size={45} />} title="NestJS" />
+              <Skill icon={<SiMongodb size={45} />} title="MongoDB" />
+              <Skill
+                icon={<PiFileSql size={50} />}
+                title="MySql & PostgreSQL"
+              />
+            </div>
+
+            <p>Mobile Development</p>
+            <div className="skills-grid">
+              <Skill icon={<GrAndroid size={50} />} title="Android Studio" />
+              <Skill icon={<FaJava size={50} />} title="Java" />
+            </div>
+
+            <p>Tools</p>
+            <div className="skills-grid">
+              <Skill icon={<SiPostman size={50} />} title="Postman" />
+              <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
+              <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
+              <Skill icon={<FaGitAlt size={50} />} title="Git & GitHub" />
+            </div>
           </div>
 
-          <p>Mobile Development</p>
-          <div className="skills-grid">
-            <Skill icon={<GrAndroid size={50} />} title="Android Studio" />
-            <Skill icon={<FaJava size={50} />} title="Java" />
+          <h1 className="section-title" id="projects">
+            Projects
+          </h1>
+          <div className="projects-container">
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
+            <Project
+              img={ina}
+              title="INA Gestión"
+              description="Emprendimiento"
+            />
           </div>
-
-          <p>Tools</p>
-          <div className="skills-grid">
-            <Skill icon={<SiPostman size={50} />} title="Postman" />
-            <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
-            <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
-            <Skill icon={<FaGitAlt size={50} />} title="Git & GitHub" />
-          </div>
-        </div>
-
-        <h1 className="section-title" id="projects">
-          Projects
-        </h1>
-        <div className="projects-container">
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
-        </div>
-        <h1 className="section-title" id="contact">
-          Contact
-        </h1>
-        <ContactForm />
-      </main>
+          <h1 className="section-title" id="contact">
+            Contact
+          </h1>
+          <ContactForm />
+        </main>
+      </ThemeProvider>
     </>
   );
 }

@@ -1,10 +1,13 @@
-import React from "react";
-import { MdModeNight } from "react-icons/md";
+import React, { useContext } from "react";
+import { MdModeNight, MdWbSunny } from "react-icons/md";
+import { ThemeContext } from "../context/ThemeContext";
 
 const NightMode = () => {
+  const { isDark, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <button className="header-button">
-      <MdModeNight size={25} />
+    <button className="header-button" onClick={toggleTheme}>
+      {isDark ? <MdWbSunny size={25} /> : <MdModeNight size={25} />}
     </button>
   );
 };

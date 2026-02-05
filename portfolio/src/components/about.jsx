@@ -10,7 +10,7 @@ const About = () => {
       <div>
         <p
           style={{
-            color: "white",
+            color: "var(--icon-color)",
             fontWeight: "bold",
             fontSize: "80px",
             textAlign: "left",
@@ -20,11 +20,11 @@ const About = () => {
           Genaro Duca
         </p>
         <p style={{ fontSize: "16px", textAlign: "left", lineHeight: "1.5" }}>
-          Full Stack Developer crafting high-performance digital experiences with a
-          focus on{" "}
+          Full Stack Developer crafting high-performance digital experiences
+          with a focus on{" "}
           <span
             style={{
-              color: "white",
+              color: "var(--primary-accent)",
               fontWeight: "bold",
               fontSize: "16px",
               textAlign: "left",
@@ -35,7 +35,7 @@ const About = () => {
           and{" "}
           <span
             style={{
-              color: "white",
+              color: "var(--primary-accent)",
               fontWeight: "bold",
               fontSize: "16px",
               textAlign: "left",
@@ -45,12 +45,16 @@ const About = () => {
           </span>
         </p>
         <div>
-          <button><a href="#projects">Explore Projects</a></button>
-          <button><a href="#contact">Let´s Chat</a></button>
+          <button>
+            <a href="#projects">Explore Projects</a>
+          </button>
+          <button>
+            <a href="#contact">Let´s Chat</a>
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default About; 
+export default About;
