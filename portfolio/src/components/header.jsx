@@ -5,7 +5,7 @@ const Header = () => {
     <div className="glass-card header">
       <p><strong>Portfolio</strong> Genaro</p>
       <nav>
-          <a href="#about">About</a>
+          <a href="#about">About Me</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
       </nav>

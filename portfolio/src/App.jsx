@@ -4,6 +4,8 @@ import About from './components/about'
 import Background from './components/background'
 import Project from './components/project'
 
+import ina from './assets/ina.png';
+
 function App() {
   return (
     <>
@@ -18,9 +20,18 @@ function App() {
       {/* CONTENIDO DE TU PORTFOLIO */}
       <main>
         <Header />
+        <h1 className="section-title" id="about">About Me</h1>
         <About />
         <Background />
-        <Project img="" title="" description="" />
+        <h1 className="section-title" id="projects">Projects</h1>
+        <div className='projects-container'>
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+          <Project img={ina} title="INA Gestión" description="Emprendimiento" />
+        </div>
       </main>
     </>
   );
