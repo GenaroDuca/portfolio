@@ -227,3 +227,16 @@ main {
   width: 100%;
   border-radius: 15px;
 }
+
+/* Mouse Follower */
+.mouse-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: var(--electric-purple);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  z-index: -9;
+  opacity: 0.3;
+}
