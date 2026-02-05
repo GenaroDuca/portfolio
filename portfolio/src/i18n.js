@@ -14,9 +14,9 @@ const resources = {
         title: "About Me",
         name: "Genaro Duca",
         description:
-          "Full Stack Developer crafting high-performance digital experiences with a focus on <1>minimalist aesthetics</1> and <3>modern architecture.</3>",
-        explore_projects: "Explore Projects",
-        lets_chat: "Let's Chat",
+          "Full Stack Developer crafting high-performance digital experiences with a focus on <0>minimalist aesthetics</0> and <2>modern architecture.</2>",
+        explore_projects: "Projects",
+        lets_chat: "Contact",
       },
       background: {
         title: "BACKGROUND",
@@ -58,9 +58,9 @@ const resources = {
         title: "Sobre mí",
         name: "Genaro Duca",
         description:
-          "Desarrollador Full Stack creando experiencias digitales de alto rendimiento con un enfoque en <1>estética minimalista</1> y <3>arquitectura moderna.</3>",
-        explore_projects: "Explorar Proyectos",
-        lets_chat: "Hablemos",
+          "Desarrollador Full Stack creando experiencias digitales de alto rendimiento con un enfoque en <0>estética minimalista</0> y <2>arquitectura moderna.</2>",
+        explore_projects: "Proyectos",
+        lets_chat: "Contacto",
       },
       background: {
         title: "TRAYECTORIA",

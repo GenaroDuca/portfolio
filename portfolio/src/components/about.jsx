@@ -24,8 +24,6 @@ const About = () => {
         </p>
         <p style={{ fontSize: "16px", textAlign: "left", lineHeight: "1.5" }}>
           <Trans i18nKey="about.description">
-            Full Stack Developer crafting high-performance digital experiences
-            with a focus on{" "}
             <span
               style={{
                 color: "var(--primary-accent)",
@@ -35,8 +33,8 @@ const About = () => {
               }}
             >
               minimalist aesthetics
-            </span>{" "}
-            and{" "}
+            </span>
+            and
             <span
               style={{
                 color: "var(--primary-accent)",
