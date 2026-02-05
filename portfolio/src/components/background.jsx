@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Background = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="glass-card background">
       <p
@@ -12,7 +15,7 @@ const Background = () => {
           letterSpacing: "3px",
         }}
       >
-        BACKGROUND
+        {t("background.title")}
       </p>
       <div>
         <p
@@ -21,11 +24,7 @@ const Background = () => {
             fontSize: "16px",
           }}
         >
-          I am a Full Stack Web Developer passionate about building clean,
-          efficient, and scalable digital solutions. Having recently completed
-          my professional training, I focus on the intersection of modern
-          frontend architecture with React and robust backend management with
-          Supabase.
+          {t("background.p1")}
         </p>
         <p
           style={{
@@ -33,9 +32,7 @@ const Background = () => {
             fontSize: "16px",
           }}
         >
-          I am currently developing a custom management system for a fragrance
-          business, applying my technical skills to solve real-world logistical
-          problems and optimize business workflows.
+          {t("background.p2")}
         </p>
       </div>
     </div>

@@ -32,12 +32,14 @@ import { FaGitAlt } from "react-icons/fa6";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 
+import { useTranslation } from "react-i18next";
+
 function App() {
-  // const { isDark } = useContext(ThemeContext); // Removed: App is outside the provider
+  const { t } = useTranslation();
 
   return (
-    <>
-      <ThemeProvider>
+    <ThemeProvider>
+      <>
         <Toaster
           position="top-right"
           toastOptions={{
@@ -73,17 +75,17 @@ function App() {
           </div>
 
           <h1 className="section-title" id="about">
-            About Me
+            {t("about.title")}
           </h1>
           <About />
 
           <Background />
 
           <h1 className="section-title" id="skills">
-            Tech Stack
+            {t("tech_stack.title")}
           </h1>
           <div className="skills-container">
-            <p>Frontend Development</p>
+            <p>{t("tech_stack.frontend")}</p>
             <div className="skills-grid">
               <Skill icon={<FaReact size={45} />} title="React" />
               <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
@@ -91,7 +93,7 @@ function App() {
               <Skill icon={<FaCss3Alt size={50} />} title="CSS3" />
             </div>
 
-            <p>Backend Development</p>
+            <p>{t("tech_stack.backend")}</p>
             <div className="skills-grid">
               <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
               <Skill icon={<SiNestjs size={45} />} title="NestJS" />
@@ -102,13 +104,13 @@ function App() {
               />
             </div>
 
-            <p>Mobile Development</p>
+            <p>{t("tech_stack.mobile")}</p>
             <div className="skills-grid">
               <Skill icon={<GrAndroid size={50} />} title="Android Studio" />
               <Skill icon={<FaJava size={50} />} title="Java" />
             </div>
 
-            <p>Tools</p>
+            <p>{t("tech_stack.tools")}</p>
             <div className="skills-grid">
               <Skill icon={<SiPostman size={50} />} title="Postman" />
               <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
@@ -118,7 +120,7 @@ function App() {
           </div>
 
           <h1 className="section-title" id="projects">
-            Projects
+            {t("projects.title")}
           </h1>
           <div className="projects-container">
             <Project
@@ -153,12 +155,12 @@ function App() {
             />
           </div>
           <h1 className="section-title" id="contact">
-            Contact
+            {t("contact.title")}
           </h1>
           <ContactForm />
         </main>
-      </ThemeProvider>
-    </>
+      </>
+    </ThemeProvider>
   );
 }
 

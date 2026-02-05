@@ -1,11 +1,13 @@
 import { Toaster, toast } from "react-hot-toast";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa6";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const form = useRef();
 
   const [name, setName] = useState("");
@@ -20,10 +22,8 @@ const ContactForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const notifyMessageSuccess = () =>
-    toast.success("Message sent successfully!");
-  const notifyMessageError = (msg) =>
-    toast.error(msg || "Failed to send message!");
+  const notifyMessageSuccess = () => toast.success(t("contact.success"));
+  const notifyMessageError = (msg) => toast.error(msg || t("contact.error"));
 
   const cleanForm = () => {
     setName("");
@@ -40,7 +40,7 @@ const ContactForm = () => {
   // Send mail
   const sendMail = (e) => {
     e.preventDefault();
-    
+
     const newErrors = {
       name: !validateName(name),
       email: !validateEmail(email),
@@ -50,7 +50,7 @@ const ContactForm = () => {
     setErrors(newErrors);
 
     if (Object.values(newErrors).some((error) => error)) {
-      notifyMessageError("Check the highlighted fields");
+      notifyMessageError(t("contact.check_fields"));
       return;
     }
 
@@ -97,7 +97,7 @@ const ContactForm = () => {
 
       <form onSubmit={sendMail} ref={form}>
         <div>
-          <label>Name</label>
+          <label>{t("contact.name")}</label>
           <input
             type="text"
             name="name"
@@ -111,7 +111,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label>Email</label>
+          <label>{t("contact.email")}</label>
           <input
             type="email"
             name="email"
@@ -125,7 +125,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label>Message</label>
+          <label>{t("contact.message")}</label>
           <textarea
             name="message"
             value={message}
@@ -138,7 +138,7 @@ const ContactForm = () => {
         </div>
 
         <button disabled={loading} type="submit">
-          {loading ? "Sending..." : "Send Message"}
+          {loading ? t("contact.sending") : t("contact.send")}
         </button>
       </form>
     </div>
