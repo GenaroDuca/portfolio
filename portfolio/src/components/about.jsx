@@ -26,7 +26,7 @@ const About = () => {
           <Trans i18nKey="about.description">
             <span
               style={{
-                color: "var(--primary-accent)",
+                color: "var(--icon-color)",
                 fontWeight: "bold",
                 fontSize: "16px",
                 textAlign: "left",
@@ -37,7 +37,7 @@ const About = () => {
             and
             <span
               style={{
-                color: "var(--primary-accent)",
+                color: "var(--icon-color)",
                 fontWeight: "bold",
                 fontSize: "16px",
                 textAlign: "left",
