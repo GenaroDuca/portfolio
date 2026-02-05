@@ -9,6 +9,9 @@ import Project from "./components/project";
 import MouseFollower from "./components/MouseFollower";
 import ContactForm from "./components/contactForm";
 import Skill from "./components/Skill";
+import ScrollToTop from "./components/ScrollToTop";
+import NightMode from "./components/nightMode";
+import ChangeLanguage from "./components/changelanguage";
 
 import ina from "./assets/ina.png";
 
@@ -54,10 +57,16 @@ function App() {
       </div>
 
       <MouseFollower />
+      <ScrollToTop />
 
       {/* CONTENIDO PORTFOLIO */}
       <main>
         <Header />
+        <div className="header-buttons">
+          <NightMode />
+          <ChangeLanguage />
+        </div>
+
         <h1 className="section-title" id="about">
           About Me
         </h1>
