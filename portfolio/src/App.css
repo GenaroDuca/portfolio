@@ -53,6 +53,7 @@ body.light {
   --glow-4: #c7d2fe; /* Indigo 200 */
   background-color: var(--bg-color);
   color: var(--text-color);
+  --backdrop-color: rgba(0, 0, 0, 0.274);
 }
 
 body.dark {
@@ -68,6 +69,7 @@ body.dark {
   --glow-4: #312e81;
   background-color: var(--bg-color);
   color: var(--text-color);
+  --backdrop-color: rgba(0, 0, 0, 0);
 }
 
 /* Scroll To Top Button */
@@ -670,4 +672,111 @@ main {
 /* Ensure the card hover status works correctly with the div */
 .project.click {
   cursor: pointer;
+}
+
+/* Lightbox Styles */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(134, 134, 134, 0.322);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--icon-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10010;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+  color: var(--primary-accent);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--icon-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10009;
+  transition: all 0.3s ease;
+}
+
+.lightbox-nav:hover {
+  color: var(--primary-accent);
+}
+
+.lightbox-nav.prev {
+  left: 30px;
+}
+
+.lightbox-nav.next {
+  right: 30px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-modal {
+    padding: 10px;
+  }
+
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .lightbox-close,
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .lightbox-nav.prev {
+    left: 5px;
+    top: 65%;
+  }
+
+  .lightbox-nav.next {
+    right: 5px;
+    top: 65%;
+  }
 }
