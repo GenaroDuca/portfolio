@@ -1,14 +1,44 @@
 import React from "react";
+import { IoLogoGithub } from "react-icons/io";
 
-const Project = ({ img, title, description }) => {
+const Project = ({ img, title, description, link, github }) => {
   return (
-    <div className="glass-card project">
-      <img src={img} alt="Project Screenshot" />
-      <div>
-        <h3>{title}</h3>
-        <p style={{color: "var(--text-color)"}}>{description}</p>
+    <a
+      className={link ? "glass-card project click" : "glass-card project"}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="project-info">
+        <h3 style={{ color: "var(--icon-color)" }}>{title}</h3>
       </div>
-    </div>
+
+      <img src={img} alt="Project Screenshot" />
+      <p
+        style={{
+          color: "var(--text-color)",
+          textAlign: "justify",
+          hyphens: "auto",
+          WebkitHyphens: "auto",
+          msHyphens: "auto",
+        }}
+      >
+        {description}
+      </p>
+
+      <div className="project-links">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--icon-color)" }}
+          >
+            <IoLogoGithub size={30} />
+          </a>
+        )}
+      </div>
+    </a>
   );
 };
 

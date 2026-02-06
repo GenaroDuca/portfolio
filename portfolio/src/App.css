@@ -328,8 +328,16 @@ main {
   gap: 20px;
 }
 
-.project:hover {
+.project-links {
+  display: flex;
+  justify-content: end;
+}
+
+.project.click:hover {
   cursor: pointer;
+}
+
+.project-links a svg:hover {
   transform: translateY(-2px);
 }
 

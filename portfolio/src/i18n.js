@@ -32,6 +32,10 @@ const resources = {
       },
       projects: {
         title: "Projects",
+        ina_description:
+          "Inventory and Sales Management System: Development of a comprehensive application for a fragrance business using React and Supabase. I implemented a scalable architecture for real-time stock management, customer registration, and sales tracking, prioritizing an intuitive and optimized interface for the business's operational efficiency.",
+        catube_description:
+          "CatTube: Streaming, E-commerce & Education. Development of a comprehensive video platform for creators using Node.js (Nest.js) and MySQL. I implemented a native online store, an educational module, and a custom discovery system, achieving a minimalist interface designed to centralize monetization, learning, and social interaction into a single, seamless experience.",
       },
       contact: {
         title: "Contact",
@@ -76,6 +80,10 @@ const resources = {
       },
       projects: {
         title: "Proyectos",
+        ina_description:
+          "Sistema de Gestión de Inventario y Ventas Desarrollo de una aplicación integral para un emprendimiento de fragancias utilizando React y Supabase. Implementé una arquitectura escalable para el manejo de stock en tiempo real, registro de clientes y seguimiento de ventas, priorizando una interfaz intuitiva y optimizada para la eficiencia operativa del negocio.",
+        catube_description:
+          "CatTube: Streaming, E-commerce & Education Desarrollo de una plataforma de video integral para creadores utilizando Node.js (Nest.js) y MySQL. Implementé una tienda online nativa, un módulo educativo y un sistema de descubrimiento personalizado, logrando una interfaz minimalista diseñada para centralizar la monetización, el aprendizaje y la interacción social en una sola experiencia fluida.",
       },
       contact: {
         title: "Contacto",

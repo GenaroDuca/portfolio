@@ -16,6 +16,7 @@ import ChangeLanguage from "./components/ChangeLanguage";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import ina from "./assets/ina.png";
+import catube from "./assets/catube.png";
 
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -74,18 +75,28 @@ function App() {
             <ChangeLanguage />
           </div>
 
-          <h1 className="section-title" id="about">
+          <h1
+            className="section-title"
+            id="about"
+            style={{ color: "var(--icon-color)" }}
+          >
             {t("about.title")}
           </h1>
           <About />
 
           <Background />
 
-          <h1 className="section-title" id="skills">
+          <h1
+            className="section-title"
+            id="skills"
+            style={{ color: "var(--icon-color)" }}
+          >
             {t("tech_stack.title")}
           </h1>
           <div className="skills-container">
-            <p>{t("tech_stack.frontend")}</p>
+            <p style={{ color: "var(--icon-color)" }}>
+              {t("tech_stack.frontend")}
+            </p>
             <div className="skills-grid">
               <Skill icon={<FaReact size={45} />} title="React" />
               <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
@@ -93,7 +104,9 @@ function App() {
               <Skill icon={<FaCss3Alt size={50} />} title="CSS3" />
             </div>
 
-            <p>{t("tech_stack.backend")}</p>
+            <p style={{ color: "var(--icon-color)" }}>
+              {t("tech_stack.backend")}
+            </p>
             <div className="skills-grid">
               <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
               <Skill icon={<SiNestjs size={45} />} title="NestJS" />
@@ -104,13 +117,15 @@ function App() {
               />
             </div>
 
-            <p>{t("tech_stack.mobile")}</p>
+            {/* <p style={{ color: "var(--icon-color)" }}>{t("tech_stack.mobile")}</p>
             <div className="skills-grid">
               <Skill icon={<GrAndroid size={50} />} title="Android Studio" />
               <Skill icon={<FaJava size={50} />} title="Java" />
-            </div>
+            </div> */}
 
-            <p>{t("tech_stack.tools")}</p>
+            <p style={{ color: "var(--icon-color)" }}>
+              {t("tech_stack.tools")}
+            </p>
             <div className="skills-grid">
               <Skill icon={<SiPostman size={50} />} title="Postman" />
               <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
@@ -119,42 +134,32 @@ function App() {
             </div>
           </div>
 
-          <h1 className="section-title" id="projects">
+          <h1
+            className="section-title"
+            id="projects"
+            style={{ color: "var(--icon-color)" }}
+          >
             {t("projects.title")}
           </h1>
           <div className="projects-container">
             <Project
               img={ina}
               title="INA Gestión"
-              description="Emprendimiento"
+              description={t("projects.ina_description")}
             />
             <Project
-              img={ina}
-              title="INA Gestión"
-              description="Emprendimiento"
-            />
-            <Project
-              img={ina}
-              title="INA Gestión"
-              description="Emprendimiento"
-            />
-            <Project
-              img={ina}
-              title="INA Gestión"
-              description="Emprendimiento"
-            />
-            <Project
-              img={ina}
-              title="INA Gestión"
-              description="Emprendimiento"
-            />
-            <Project
-              img={ina}
-              title="INA Gestión"
-              description="Emprendimiento"
+              img={catube}
+              title="Catube"
+              description={t("projects.catube_description")}
+              link="https://catube.xyz"
+              github="https://github.com/GenaroDuca/Catube"
             />
           </div>
-          <h1 className="section-title" id="contact">
+          <h1
+            className="section-title"
+            id="contact"
+            style={{ color: "var(--icon-color)" }}
+          >
             {t("contact.title")}
           </h1>
           <ContactForm />
