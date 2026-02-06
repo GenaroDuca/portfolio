@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { RxOpenInNewWindow } from "react-icons/rx";
 
 const Project = ({ img, title, description, link, github }) => {
   // Ensure images is an array and limit to max 4 photos
@@ -37,12 +38,6 @@ const Project = ({ img, title, description, link, github }) => {
     setCurrentIndex(index);
   };
 
-  const handleCardClick = () => {
-    if (link) {
-      window.open(link, "_blank", "noopener,noreferrer");
-    }
-  };
-
   const handleImageClick = (e) => {
     e.stopPropagation(); // Prevent card click
     setIsModalOpen(true);
@@ -65,10 +60,7 @@ const Project = ({ img, title, description, link, github }) => {
 
   return (
     <>
-      <div
-        className={link ? "glass-card project click" : "glass-card project"}
-        onClick={handleCardClick}
-      >
+      <div className="glass-card project">
         <div className="project-info">
           <h3 style={{ color: "var(--icon-color)" }}>{title}</h3>
         </div>
@@ -108,6 +100,17 @@ const Project = ({ img, title, description, link, github }) => {
         </p>
 
         <div className="project-links">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--icon-color)" }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <RxOpenInNewWindow size={30} />
+            </a>
+          )}
           {github && (
             <a
               href={github}
