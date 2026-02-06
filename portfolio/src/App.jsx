@@ -17,6 +17,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 import ina from "./assets/ina.png";
 import catube from "./assets/catube.png";
+import catube2 from "./assets/catube2.png";
+import catube3 from "./assets/catube3.png";
 
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -148,7 +150,7 @@ function App() {
               description={t("projects.ina_description")}
             />
             <Project
-              img={catube}
+              img={[catube, catube2, catube3]}
               title="Catube"
               description={t("projects.catube_description")}
               link="https://catube.xyz"
