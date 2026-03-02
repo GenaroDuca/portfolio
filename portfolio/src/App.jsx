@@ -1,4 +1,4 @@
-import { Toaster, toast } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 import "./App.css";
 

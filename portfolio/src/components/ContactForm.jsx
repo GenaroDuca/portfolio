@@ -64,12 +64,12 @@ const ContactForm = () => {
         "ixjwKAv_pxSFAN7B9",
       )
       .then(
-        (result) => {
+        () => {
           setLoading(false);
           notifyMessageSuccess();
           cleanForm();
         },
-        (error) => {
+        () => {
           setLoading(false);
           notifyMessageError();
         },
