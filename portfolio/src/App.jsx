@@ -36,13 +36,15 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 
 import { useTranslation } from "react-i18next";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const { t } = useTranslation();
 
   return (
-    <ThemeProvider>
-      <>
+    <>
+      <Analytics />
+      <ThemeProvider>
         <Toaster
           position="top-right"
           toastOptions={{
@@ -166,8 +168,8 @@ function App() {
           </h1>
           <ContactForm />
         </main>
-      </>
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   );
 }
 
