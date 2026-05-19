@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ─── Variables globales ─────────────────────────────────────── */
+@layer base {
+  :root {
+    --primary-accent: #a855f7;
+    --electric-purple: #bc13fe;
+    --deep-violet: #2e1065;
+    --bg-dark: #0f0720;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --glow-1: var(--deep-violet);
+    --glow-2: #581c87;
+    --glow-3: #701a75;
+    --glow-4: #312e81;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+
+  body.light {
+    --bg-color: #f0f0f0;
+    --text-color: #333333;
+    --card-bg: rgba(255, 255, 255, 0.6);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --input-bg: rgba(88, 88, 88, 0.05);
+    --icon-color: #333333;
+    --glow-1: #e9d5ff;
+    --glow-2: #f5d0fe;
+    --glow-3: #ddd6fe;
+    --glow-4: #c7d2fe;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    --backdrop-color: rgba(0, 0, 0, 0.274);
+  }
+
+  body.dark {
+    --bg-color: #0f0720;
+    --text-color: #bab8bf;
+    --icon-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --glow-1: var(--deep-violet);
+    --glow-2: #581c87;
+    --glow-3: #701a75;
+    --glow-4: #312e81;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    --backdrop-color: rgba(0, 0, 0, 0);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #root {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    #root {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+/* ─── Animaciones ────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(5px); }
+  50%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* ─── Clases de utilidad compartidas ─────────────────────────── */
+@layer components {
+  .glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid var(--card-border);
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  /* error de input */
+  .input-error {
+    border: 1.5px solid #ff6669 !important;
+    background-color: rgba(255, 77, 79, 0.05);
+    animation: shake 0.2s ease-in-out;
+  }
+}

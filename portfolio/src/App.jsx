@@ -1,7 +1,5 @@
 import { Toaster } from "react-hot-toast";
 
-import "./App.css";
-
 import Header from "./components/Header";
 import About from "./components/About";
 import Background from "./components/Background";
@@ -61,29 +59,31 @@ function App() {
           }}
         />
 
-        {/* CAPA DEL FONDO DE COLORES */}
-        <div className="background-wrapper">
-          <div className="bg-glow glow-1"></div>
-          <div className="bg-glow glow-2"></div>
-          <div className="bg-glow glow-3"></div>
-          <div className="bg-glow glow-4"></div>
+        {/* Fondo de colores — traducción exacta de .background-wrapper + .bg-glow + .glow-N */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-[-10] bg-[var(--bg-color)]">
+          <div className="absolute rounded-full blur-[100px] top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[var(--glow-1)] opacity-60" />
+          <div className="absolute rounded-full blur-[100px] top-[20%] right-[-5%] w-[600px] h-[600px] bg-[var(--glow-2)] opacity-40" />
+          <div className="absolute rounded-full blur-[100px] bottom-[10%] left-[10%] w-[400px] h-[400px] bg-[var(--glow-3)] opacity-30" />
+          <div className="absolute rounded-full blur-[100px] bottom-[-5%] right-[20%] w-[550px] h-[550px] bg-[var(--glow-4)] opacity-50" />
         </div>
 
         <MouseFollower />
         <ScrollToTop />
 
-        {/* CONTENIDO PORTFOLIO */}
-        <main>
+        {/* main — traducción de: display flex-col gap-[40px] / responsive gap-[20px] pt-[60px] */}
+        <main className="flex flex-col gap-[40px] max-[768px]:gap-5 max-[768px]:pt-[60px]">
           <Header />
-          <div className="header-buttons">
+
+          {/* header-buttons */}
+          <div className="fixed top-[2rem] right-[2rem] flex gap-5 z-[1000] max-[768px]:gap-[10px] max-[768px]:top-5 max-[768px]:right-5">
             <NightMode />
             <ChangeLanguage />
           </div>
 
+          {/* section-title */}
           <h1
-            className="section-title"
+            className="text-left border-l-[2px] border-[var(--primary-accent)] pl-[10px] text-[var(--icon-color)] max-[768px]:text-[24px]"
             id="about"
-            style={{ color: "var(--icon-color)" }}
           >
             {t("about.title")}
           </h1>
@@ -92,50 +92,42 @@ function App() {
           <Background />
 
           <h1
-            className="section-title"
+            className="text-left border-l-[2px] border-[var(--primary-accent)] pl-[10px] text-[var(--icon-color)] max-[768px]:text-[24px]"
             id="skills"
-            style={{ color: "var(--icon-color)" }}
           >
             {t("tech_stack.title")}
           </h1>
-          <div className="skills-container">
-            <p style={{ color: "var(--icon-color)" }}>
+
+          {/* skills-container */}
+          <div className="flex flex-col gap-5 px-5">
+            {/* Frontend */}
+            <p className="text-left pl-[10px] border-l-[2px] border-[var(--primary-accent)] text-[var(--icon-color)]">
               {t("tech_stack.frontend")}
             </p>
-            <div className="skills-grid">
+            <div className="grid grid-cols-6 gap-5 max-[768px]:grid-cols-2">
               <Skill icon={<FaReact size={45} />} title="React" />
-              <Skill
-                icon={<RiJavascriptFill size={50} />}
-                title="Javascript"
-              />{" "}
+              <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
               <Skill icon={<RiTailwindCssFill size={50} />} title="Tailwind" />
               <Skill icon={<FaHtml5 size={50} />} title="HTML" />
               <Skill icon={<FaCss3Alt size={50} />} title="CSS" />
             </div>
 
-            <p style={{ color: "var(--icon-color)" }}>
+            {/* Backend */}
+            <p className="text-left pl-[10px] border-l-[2px] border-[var(--primary-accent)] text-[var(--icon-color)]">
               {t("tech_stack.backend")}
             </p>
-            <div className="skills-grid">
+            <div className="grid grid-cols-6 gap-5 max-[768px]:grid-cols-2">
               <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
               <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
               <Skill icon={<SiNestjs size={45} />} title="NestJS" />
-              <Skill
-                icon={<PiFileSql size={50} />}
-                title="MySql & PostgreSQL"
-              />
+              <Skill icon={<PiFileSql size={50} />} title="MySql & PostgreSQL" />
             </div>
 
-            {/* <p style={{ color: "var(--icon-color)" }}>{t("tech_stack.mobile")}</p>
-            <div className="skills-grid">
-              <Skill icon={<GrAndroid size={50} />} title="Android Studio" />
-              <Skill icon={<FaJava size={50} />} title="Java" />
-            </div> */}
-
-            <p style={{ color: "var(--icon-color)" }}>
+            {/* Tools */}
+            <p className="text-left pl-[10px] border-l-[2px] border-[var(--primary-accent)] text-[var(--icon-color)]">
               {t("tech_stack.tools")}
             </p>
-            <div className="skills-grid">
+            <div className="grid grid-cols-6 gap-5 max-[768px]:grid-cols-2">
               <Skill icon={<SiPostman size={50} />} title="Postman" />
               <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
               <Skill icon={<FaGitAlt size={50} />} title="Git & GitHub" />
@@ -143,13 +135,14 @@ function App() {
           </div>
 
           <h1
-            className="section-title"
+            className="text-left border-l-[2px] border-[var(--primary-accent)] pl-[10px] text-[var(--icon-color)] max-[768px]:text-[24px]"
             id="projects"
-            style={{ color: "var(--icon-color)" }}
           >
             {t("projects.title")}
           </h1>
-          <div className="projects-container">
+
+          {/* projects-container */}
+          <div className="grid grid-cols-3 gap-5 max-[768px]:grid-cols-1">
             <Project
               img={ina}
               title="INA Gestión"
@@ -163,10 +156,10 @@ function App() {
               github="https://github.com/GenaroDuca/Catube"
             />
           </div>
+
           <h1
-            className="section-title"
+            className="text-left border-l-[2px] border-[var(--primary-accent)] pl-[10px] text-[var(--icon-color)] max-[768px]:text-[24px]"
             id="contact"
-            style={{ color: "var(--icon-color)" }}
           >
             {t("contact.title")}
           </h1>
