@@ -20,8 +20,8 @@ const resources = {
       },
       background: {
         title: "BACKGROUND",
-        p1: "I am a Full Stack Web Developer passionate about building clean, efficient, and scalable digital solutions. Having recently completed my professional training, I focus on the intersection of modern frontend architecture with React and robust backend management using NestJS (Node.js) and Supabase.",
-        p2: "I am currently developing a custom management system for a fragrance business, applying my technical skills to solve real-world logistical problems and optimize business workflows.",
+        p1: "I am a Full Stack Web Developer passionate about building clean, efficient, and scalable digital solutions. Having recently completed my professional training, I focus on the intersection of modern frontend architecture with React and robust backend management using and Supabase.",
+        p2: "I am currently developing a personal finance management system to optimize the control of expenses, income, and savings. Its objective is to offer a fluid and efficient experience that allows users to have total control over their finances for free and without restrictions.",
       },
       tech_stack: {
         title: "Tech Stack",
@@ -36,6 +36,12 @@ const resources = {
           "Inventory and Sales Management System: Development of a comprehensive application for a fragrance business using React and Supabase. I implemented a scalable architecture for real-time stock management, customer registration, and sales tracking, prioritizing an intuitive and optimized interface for the business's operational efficiency.",
         catube_description:
           "CatTube: Streaming, E-commerce & Education. Development of a comprehensive video platform for creators using Node.js (Nest.js) and MySQL. I implemented a native online store, an educational module, and a custom discovery system, achieving a minimalist interface designed to centralize monetization, learning, and social interaction into a single, seamless experience.",
+        opencourt_description:
+          "OpenCourt is a comprehensive web application designed for the management, organization, and automated booking of tennis court slots. The system efficiently solves the challenge of handling fixed and recurring schedules through an optimized database architecture, ensuring real-time availability and preventing booking conflicts.",
+        misfinanzas_description:
+          "My Finances is a web application designed to help you track your expenses, income, and savings. Its goal is to provide a seamless and efficient experience that allows users to have complete control over their finances, free of charge.",
+        ducaagrimensura_description:
+          "Duca Agrimensura is a professional web application designed to streamline land surveying and cadastral management processes. The system facilitates the organization of projects, documentation, and client information, providing a robust platform for surveying professionals to manage their work efficiently and reliably.",
       },
       contact: {
         title: "Contact",
@@ -69,7 +75,7 @@ const resources = {
       background: {
         title: "TRAYECTORIA",
         p1: "Soy un Desarrollador Web Full Stack apasionado por construir soluciones digitales limpias, eficientes y escalables. Habiendo completado recientemente mi formación profesional, me concentro en la intersección de una arquitectura frontend moderna con React y una gestión backend utilizando NestJS (Node.js) y Supabase.",
-        p2: "Actualmente estoy desarrollando un sistema de gestión personalizado para un negocio de fragancias, aplicando mis habilidades técnicas para resolver problemas logísticos del mundo real y optimizar los flujos de trabajo empresariales.",
+        p2: "Actualmente estoy desarrollando un sistema de gestión de finanzas personales para optimizar el control de gastos, ingresos y ahorro. Su objetivo es ofrecer una experiencia fluida y eficiente que permita a los usuarios tener un control total sobre sus finanzas de forma gratuita y libre.",
       },
       tech_stack: {
         title: "Tecnologías",
@@ -84,7 +90,14 @@ const resources = {
           "Sistema de Gestión de Inventario y Ventas Desarrollo de una aplicación integral para un emprendimiento de fragancias utilizando React y Supabase. Implementé una arquitectura escalable para el manejo de stock en tiempo real, registro de clientes y seguimiento de ventas, priorizando una interfaz intuitiva y optimizada para la eficiencia operativa del negocio.",
         catube_description:
           "CatTube: Streaming, E-commerce & Education Desarrollo de una plataforma de video integral para creadores utilizando Node.js (Nest.js) y MySQL. Implementé una tienda online nativa, un módulo educativo y un sistema de descubrimiento personalizado, logrando una interfaz minimalista diseñada para centralizar la monetización, el aprendizaje y la interacción social en una sola experiencia fluida.",
+        opencourt_description:
+          "OpenCourt es una aplicación web integral diseñada para la gestión, organización y reserva automatizada de turnos de tenis. El sistema resuelve de manera eficiente la problemática de los turnos fijos y recurrentes mediante un diseño de arquitectura de base de datos optimizado, garantizando la disponibilidad en tiempo real y previniendo la superposición de horarios.",
+        misfinanzas_description:
+          "Mis Finanzas es una aplicación web destinada al control de gastos, ingresos y ahorros. Su objetivo es ofrecer una experiencia fluida y eficiente que permita a los usuarios tener un control total sobre sus finanzas de forma gratuita y libre.",
+        ducaagrimensura_description:
+          "A professional, minimalist landing page designed for a land surveying firm. Focused on conversion and clean user experience, it showcases technical services dynamically.",
       },
+
       contact: {
         title: "Contacto",
         name: "Nombre",

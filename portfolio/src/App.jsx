@@ -14,9 +14,24 @@ import ChangeLanguage from "./components/ChangeLanguage";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import ina from "./assets/ina.png";
+
 import catube from "./assets/catube.png";
 import catube2 from "./assets/catube2.png";
 import catube3 from "./assets/catube3.png";
+
+import opencourt from "./assets/opencourt.png";
+import opencourt2 from "./assets/opencourt2.png";
+import opencourt3 from "./assets/opencourt3.png";
+
+import misfinanzas from "./assets/misfinanzas.png";
+import misfinanzas2 from "./assets/misfinanzas2.png";
+import misfinanzas3 from "./assets/misfinanzas3.png";
+import misfinanzas4 from "./assets/misfinanzas4.png";
+
+import ducaagrimensura from "./assets/ducaagrimensura.png";
+import ducaagrimensura2 from "./assets/ducaagrimensura2.png";
+import ducaagrimensura3 from "./assets/ducaagrimensura3.png";
+import ducaagrimensura4 from "./assets/ducaagrimensura4.png";
 
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -120,7 +135,10 @@ function App() {
               <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
               <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
               <Skill icon={<SiNestjs size={45} />} title="NestJS" />
-              <Skill icon={<PiFileSql size={50} />} title="MySql & PostgreSQL" />
+              <Skill
+                icon={<PiFileSql size={50} />}
+                title="MySql & PostgreSQL"
+              />
             </div>
 
             {/* Tools */}
@@ -144,17 +162,43 @@ function App() {
           {/* projects-container */}
           <div className="grid grid-cols-3 gap-5 max-[768px]:grid-cols-1">
             <Project
+              img={[opencourt, opencourt2, opencourt3]}
+              title="Open Court"
+              description={t("projects.opencourt_description")}
+              link="https://open-court.vercel.app"
+            />
+
+            <Project
+              img={[
+                ducaagrimensura,
+                ducaagrimensura2,
+                ducaagrimensura3,
+                ducaagrimensura4,
+              ]}
+              title="Duca Agrimensura"
+              description={t("projects.ducaagrimensura_description")}
+              link="https://duca-agrimensura.vercel.app/"
+            />
+
+            <Project
+              img={[misfinanzas, misfinanzas2, misfinanzas3, misfinanzas4]}
+              title="Mis Finanzas"
+              description={t("projects.misfinanzas_description")}
+              link="https://misfinanzas-gamma.vercel.app"
+            />
+
+            <Project
               img={ina}
               title="INA Gestión"
               description={t("projects.ina_description")}
             />
-            <Project
+            {/* <Project
               img={[catube, catube2, catube3]}
               title="Catube"
               description={t("projects.catube_description")}
               link="https://catube.xyz"
               github="https://github.com/GenaroDuca/Catube"
-            />
+            /> */}
           </div>
 
           <h1

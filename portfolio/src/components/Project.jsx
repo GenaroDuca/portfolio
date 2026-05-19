@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { RxOpenInNewWindow } from "react-icons/rx";
+import { TiArrowForward } from "react-icons/ti";
 
 const Project = ({ img, title, description, link, github }) => {
   const images = (Array.isArray(img) ? img : [img]).slice(0, 4);
@@ -44,7 +45,7 @@ const Project = ({ img, title, description, link, github }) => {
             src={images[currentIndex]}
             alt={`${title} - View ${currentIndex + 1}`}
             onClick={handleImageClick}
-            className="w-full h-full object-cover block cursor-pointer transition-transform duration-500"
+            className="w-full h-full object-contain block cursor-pointer transition-transform duration-500"
           />
 
           {images.length > 1 && (
@@ -86,7 +87,7 @@ const Project = ({ img, title, description, link, github }) => {
               className="text-[var(--icon-color)] hover:-translate-y-[2px]"
               onClick={(e) => e.stopPropagation()}
             >
-              <RxOpenInNewWindow size={30} />
+              <TiArrowForward size={30} />
             </a>
           )}
           {github && (

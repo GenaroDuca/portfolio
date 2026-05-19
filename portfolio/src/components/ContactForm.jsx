@@ -116,7 +116,7 @@ const ContactForm = () => {
         <button
           disabled={loading}
           type="submit"
-          className="self-start py-5 px-[40px] rounded-[30px] bg-[var(--card-bg)] border-[1.5px] border-[var(--card-border)] text-[var(--text-color)] cursor-pointer hover:-translate-y-[2px] disabled:opacity-50"
+          className="self-center py-5 px-[40px] rounded-[30px] bg-[var(--card-bg)] border-[1.5px] border-[var(--card-border)] text-[var(--text-color)] cursor-pointer hover:-translate-y-[2px] disabled:opacity-50"
         >
           {loading ? t("contact.sending") : t("contact.send")}
         </button>
