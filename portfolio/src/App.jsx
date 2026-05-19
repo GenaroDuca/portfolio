@@ -34,6 +34,7 @@ import { RiSupabaseFill } from "react-icons/ri";
 import { FaGitAlt } from "react-icons/fa6";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 import { useTranslation } from "react-i18next";
 import { Analytics } from "@vercel/analytics/react";
@@ -103,18 +104,22 @@ function App() {
             </p>
             <div className="skills-grid">
               <Skill icon={<FaReact size={45} />} title="React" />
-              <Skill icon={<RiJavascriptFill size={50} />} title="Javascript" />
-              <Skill icon={<FaHtml5 size={50} />} title="HTML5" />
-              <Skill icon={<FaCss3Alt size={50} />} title="CSS3" />
+              <Skill
+                icon={<RiJavascriptFill size={50} />}
+                title="Javascript"
+              />{" "}
+              <Skill icon={<RiTailwindCssFill size={50} />} title="Tailwind" />
+              <Skill icon={<FaHtml5 size={50} />} title="HTML" />
+              <Skill icon={<FaCss3Alt size={50} />} title="CSS" />
             </div>
 
             <p style={{ color: "var(--icon-color)" }}>
               {t("tech_stack.backend")}
             </p>
             <div className="skills-grid">
+              <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
               <Skill icon={<BiLogoTypescript size={50} />} title="Typescript" />
               <Skill icon={<SiNestjs size={45} />} title="NestJS" />
-              <Skill icon={<SiMongodb size={45} />} title="MongoDB" />
               <Skill
                 icon={<PiFileSql size={50} />}
                 title="MySql & PostgreSQL"
@@ -133,7 +138,6 @@ function App() {
             <div className="skills-grid">
               <Skill icon={<SiPostman size={50} />} title="Postman" />
               <Skill icon={<IoLogoFigma size={50} />} title="Figma" />
-              <Skill icon={<RiSupabaseFill size={50} />} title="Supabase" />
               <Skill icon={<FaGitAlt size={50} />} title="Git & GitHub" />
             </div>
           </div>
