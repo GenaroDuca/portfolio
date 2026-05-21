@@ -1,5 +1,7 @@
 import React from "react";
-import profile from "../assets/profile.jpg";
+// import profile from "../assets/profile.jpg";
+import ducasoluciones from "../assets/ducasoluciones.JPG";
+
 import { useTranslation, Trans } from "react-i18next";
 
 const About = () => {
@@ -10,7 +12,7 @@ const About = () => {
       {/* Foto */}
       <div className="shrink-0">
         <img
-          src={profile}
+          src={ducasoluciones}
           alt="Profile picture"
           className="w-[400px] h-[400px] object-cover rounded-[20px] border-[1.5px] border-[var(--card-border)] max-[768px]:w-[200px] max-[768px]:h-[200px]"
         />

@@ -13,11 +13,9 @@ import ChangeLanguage from "./components/ChangeLanguage";
 
 import { ThemeProvider } from "./context/ThemeContext";
 
-import ina from "./assets/ina.png";
-
-import catube from "./assets/catube.png";
-import catube2 from "./assets/catube2.png";
-import catube3 from "./assets/catube3.png";
+// import catube from "./assets/catube.png";
+// import catube2 from "./assets/catube2.png";
+// import catube3 from "./assets/catube3.png";
 
 import opencourt from "./assets/opencourt.png";
 import opencourt2 from "./assets/opencourt2.png";
@@ -32,6 +30,11 @@ import ducaagrimensura from "./assets/ducaagrimensura.png";
 import ducaagrimensura2 from "./assets/ducaagrimensura2.png";
 import ducaagrimensura3 from "./assets/ducaagrimensura3.png";
 import ducaagrimensura4 from "./assets/ducaagrimensura4.png";
+
+import ina from "./assets/ina.jpg";
+import ina2 from "./assets/ina2.jpg";
+import ina3 from "./assets/ina3.jpg";
+import ina4 from "./assets/ina4.jpg";
 
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -161,13 +164,20 @@ function App() {
 
           {/* projects-container */}
           <div className="grid grid-cols-3 gap-5 max-[768px]:grid-cols-1">
+            
+            <Project
+              img={[ina, ina2, ina3, ina4]}
+              title="INA Gestión"
+              description={t("projects.ina_description")}
+            />
+            
             <Project
               img={[opencourt, opencourt2, opencourt3]}
-              title="Open Court"
+              title="OpenCourt"
               description={t("projects.opencourt_description")}
               link="https://open-court.vercel.app"
             />
-
+        
             <Project
               img={[
                 ducaagrimensura,
@@ -187,11 +197,7 @@ function App() {
               link="https://misfinanzas-gamma.vercel.app"
             />
 
-            <Project
-              img={ina}
-              title="INA Gestión"
-              description={t("projects.ina_description")}
-            />
+            
             {/* <Project
               img={[catube, catube2, catube3]}
               title="Catube"

@@ -41,7 +41,7 @@ const resources = {
         misfinanzas_description:
           "My Finances is a web application designed to help you track your expenses, income, and savings. Its goal is to provide a seamless and efficient experience that allows users to have complete control over their finances, free of charge.",
         ducaagrimensura_description:
-          "Duca Agrimensura is a professional web application designed to streamline land surveying and cadastral management processes. The system facilitates the organization of projects, documentation, and client information, providing a robust platform for surveying professionals to manage their work efficiently and reliably.",
+          "A professional, minimalist landing page designed for a land surveying firm. Focused on conversion and clean user experience, it showcases technical services dynamically.",
       },
       contact: {
         title: "Contact",
@@ -87,15 +87,15 @@ const resources = {
       projects: {
         title: "Proyectos",
         ina_description:
-          "Sistema de Gestión de Inventario y Ventas Desarrollo de una aplicación integral para un emprendimiento de fragancias utilizando React y Supabase. Implementé una arquitectura escalable para el manejo de stock en tiempo real, registro de clientes y seguimiento de ventas, priorizando una interfaz intuitiva y optimizada para la eficiencia operativa del negocio.",
+          "Sistema de gestión de inventario y ventas desarrollado a medida. Es una aplicación integral para un emprendimiento de fragancias utilizando React y Supabase. Implementé una arquitectura escalable para el manejo de stock en tiempo real, registro de clientes y de ventas, priorizando una interfaz intuitiva y optimizada para la eficiencia operativa del negocio.",
         catube_description:
-          "CatTube: Streaming, E-commerce & Education Desarrollo de una plataforma de video integral para creadores utilizando Node.js (Nest.js) y MySQL. Implementé una tienda online nativa, un módulo educativo y un sistema de descubrimiento personalizado, logrando una interfaz minimalista diseñada para centralizar la monetización, el aprendizaje y la interacción social en una sola experiencia fluida.",
+          "CatTube: Streaming, e-commerce & education desarrollo de una plataforma de video integral para creadores utilizando Node.js (Nest.js) y MySQL. Implementé una tienda online nativa, un módulo educativo y un sistema de descubrimiento personalizado, logrando una interfaz minimalista diseñada para centralizar la monetización, el aprendizaje y la interacción social en una sola experiencia fluida.",
         opencourt_description:
           "OpenCourt es una aplicación web integral diseñada para la gestión, organización y reserva automatizada de turnos de tenis. El sistema resuelve de manera eficiente la problemática de los turnos fijos y recurrentes mediante un diseño de arquitectura de base de datos optimizado, garantizando la disponibilidad en tiempo real y previniendo la superposición de horarios.",
         misfinanzas_description:
           "Mis Finanzas es una aplicación web destinada al control de gastos, ingresos y ahorros. Su objetivo es ofrecer una experiencia fluida y eficiente que permita a los usuarios tener un control total sobre sus finanzas de forma gratuita y libre.",
         ducaagrimensura_description:
-          "A professional, minimalist landing page designed for a land surveying firm. Focused on conversion and clean user experience, it showcases technical services dynamically.",
+          "Diseño web minimalista de alto impacto para agrimensura, centrado en la conversión del usuario y en la presentación dinámica de soluciones técnicas.",
       },
 
       contact: {
@@ -115,7 +115,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: "es",
   interpolation: {
     escapeValue: false,
   },
