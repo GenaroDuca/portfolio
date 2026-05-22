@@ -1,6 +1,6 @@
 import React from "react";
 // import profile from "../assets/profile.jpg";
-import ducasoluciones from "../assets/ducasoluciones.JPG";
+import ducasoluciones from "../../assets/ducasoluciones.JPG";
 
 import { useTranslation, Trans } from "react-i18next";
 
@@ -22,7 +22,7 @@ const About = () => {
       <div className="flex flex-col gap-[40px] max-[768px]:gap-5">
         {/* Nombre */}
         <p
-          className="font-bold text-[80px] text-left leading-[1] text-[var(--icon-color)] max-[768px]:text-[30px] max-[768px]:text-center"
+          className="font-bold text-[60px] text-left leading-[1] text-[var(--icon-color)] max-[768px]:text-[30px] max-[768px]:text-center"
         >
           {t("about.name")}
         </p>
@@ -42,20 +42,18 @@ const About = () => {
 
         {/* Botones */}
         <div className="flex flex-row gap-5 max-[768px]:flex-col max-[768px]:gap-[10px]">
-          <button
-            className="py-5 px-[40px] rounded-[30px] cursor-pointer text-[14px] bg-[var(--electric-purple)] border-[1.5px] border-[var(--electric-purple)] shadow-[0_0_20px_rgba(188,19,254,0.5)] hover:-translate-y-[2px] max-[768px]:w-full max-[768px]:py-[15px] max-[768px]:px-0"
+          <a
+            href="#services"
+            className="self-center py-5 px-[40px] rounded-full bg-[var(--glow-3)] border-[1.5px] border-[var(--card-border)] font-bold text-[var(--icon-color)] cursor-pointer hover:-translate-y-[2px]"
           >
-            <a href="#projects" className="no-underline text-white">
-              {t("about.explore_projects")}
-            </a>
-          </button>
-          <button
-            className="py-5 px-[40px] rounded-[30px] cursor-pointer text-[14px] bg-[var(--card-bg)] [backdrop-filter:blur(12px)] [-webkit-backdrop-filter:blur(12px)] border-[1.5px] border-[var(--card-border)] hover:-translate-y-[2px] max-[768px]:w-full max-[768px]:py-[15px] max-[768px]:px-0"
+            {t("about.services")}
+          </a>
+          <a
+            href="#contact"
+            className="self-center py-5 px-[40px] rounded-full bg-[var(--card-bg)] border-[1.5px] border-[var(--card-border)] font-bold text-[var(--icon-color)] cursor-pointer hover:-translate-y-[2px]"
           >
-            <a href="#contact" className="no-underline text-[var(--icon-color)]">
-              {t("about.lets_chat")}
-            </a>
-          </button>
+            {t("about.lets_chat")}
+          </a>
         </div>
       </div>
     </div>

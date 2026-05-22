@@ -11,7 +11,7 @@ const ChangeLanguage = () => {
 
   return (
     <button
-      className="border-none bg-transparent cursor-pointer text-[var(--text-color)] hover:text-[var(--primary-accent)] text-[16px] flex items-center justify-center max-[768px]:text-[14px]"
+      className="border-none bg-transparent cursor-pointer text-[var(--text-color)] hover:-translate-y-[2px] text-[16px] flex items-center justify-center max-[768px]:text-[14px]"
       onClick={toggleLanguage}
     >
       {i18n.language === "en" ? "ES" : "EN"}

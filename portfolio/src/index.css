@@ -3,17 +3,18 @@
 /* ─── Variables globales ─────────────────────────────────────── */
 @layer base {
   :root {
-    --primary-accent: #a855f7;
-    --electric-purple: #bc13fe;
+    --primary-accent: #582898;
+    --electric-purple: #6E3DB2;
     --deep-violet: #2e1065;
     --bg-dark: #0f0720;
     --card-bg: rgba(255, 255, 255, 0.05);
     --card-border: rgba(255, 255, 255, 0.1);
     --input-bg: rgba(255, 255, 255, 0.05);
     --glow-1: var(--deep-violet);
-    --glow-2: #581c87;
-    --glow-3: #701a75;
-    --glow-4: #312e81;
+    --glow-2: #7f4bc7;
+    --glow-3: #6E3DB2;
+    --glow-4: #582898;
+    --shadow: rgba(188,19,254,0.5);
   }
 
   html {
@@ -23,6 +24,7 @@
   body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    
     overflow-x: hidden;
   }
 
@@ -37,6 +39,7 @@
     --glow-2: #f5d0fe;
     --glow-3: #ddd6fe;
     --glow-4: #c7d2fe;
+    --slogan-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #c026d3 100%);
     background-color: var(--bg-color);
     color: var(--text-color);
     --backdrop-color: rgba(0, 0, 0, 0.274);
@@ -50,9 +53,10 @@
     --card-border: rgba(255, 255, 255, 0.1);
     --input-bg: rgba(255, 255, 255, 0.05);
     --glow-1: var(--deep-violet);
-    --glow-2: #581c87;
-    --glow-3: #701a75;
-    --glow-4: #312e81;
+    --glow-2: #7f4bc7;
+    --glow-3: #6E3DB2;
+    --glow-4: #582898;
+    --slogan-gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #60a5fa 100%);
     background-color: var(--bg-color);
     color: var(--text-color);
     --backdrop-color: rgba(0, 0, 0, 0);
