@@ -11,10 +11,10 @@ const Footer = () => {
 
   return (
     <footer className="glass-card flex flex-col gap-10 p-[60px] text-[var(--text-color)] max-[768px]:p-6 max-[768px]:gap-8 ">
-      <div className="grid grid-cols-3 gap-12 max-[768px]:grid-cols-1 max-[768px]:gap-8 text-left max-[768px]:text-center">
+      <div className="grid grid-cols-3 gap-12 max-[1080px]:grid-cols-1 max-[1080px]:gap-8 text-left max-[1080px]:text-center">
         {/* Brand/Logo Column */}
-        <div className="flex flex-col gap-4 max-[768px]:items-center">
-          <div className="flex flex-col gap-1 max-[768px]:items-center">
+        <div className="flex flex-col gap-4 max-[1080px]:items-center">
+          <div className="flex flex-col gap-1 max-[1080px]:items-center">
             <h3 className="font-bold text-[24px] text-[var(--icon-color)] tracking-tight leading-tight">
               {t("header.portfolio")}
             </h3>
@@ -28,11 +28,11 @@ const Footer = () => {
         </div>
 
         {/* Quick Links Column */}
-        <div className="flex flex-col gap-4 max-[768px]:gap-2 max-[768px]:items-center">
+        <div className="flex flex-col gap-4 max-[1080px]:gap-2 max-[1080px]:items-center">
           <h3 className="font-bold text-[16px] text-[var(--icon-color)] uppercase tracking-wider">
             {t("footer.links_title")}
           </h3>
-          <nav className="flex flex-col gap-3 text-[14px] max-[768px]:items-center">
+          <nav className="flex flex-col gap-3 text-[14px] max-[1080px]:items-center">
             <a
               href="#"
               className="hover:text-[var(--icon-color)] transition-all duration-300 hover:translate-x-[2px] w-fit"
@@ -67,12 +67,12 @@ const Footer = () => {
         </div>
 
         {/* Contact Info Column */}
-        <div className="flex flex-col gap-4 max-[768px]:items-center">
+        <div className="flex flex-col gap-4 max-[1080px]:items-center">
           <h3 className="font-bold text-[16px] text-[var(--icon-color)] uppercase tracking-wider">
             {t("footer.contact_title")}
           </h3>
-          <div className="flex flex-col gap-3 text-[14px] opacity-80 max-[768px]:items-center">
-            <div className="flex items-center gap-2 max-[768px]:justify-center">
+          <div className="flex flex-col gap-3 text-[14px] opacity-80 max-[1080px]:items-center">
+            <div className="flex items-center gap-2 max-[1080px]:justify-center">
               <FaMapMarkerAlt className="text-[var(--icon-color)] shrink-0" />
               <span>{t("footer.location")}</span>
             </div>
@@ -135,7 +135,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Rights Row */}
-      <div className="border-t border-[var(--card-border)] pt-6 flex justify-between items-center text-[12px] opacity-60 flex-wrap gap-4 max-[768px]:flex-col max-[768px]:text-center">
+      <div className="border-t border-[var(--card-border)] pt-6 flex justify-between items-center text-[12px] opacity-60 flex-wrap gap-4 max-[1080px]:flex-col max-[1080px]:text-center">
         <p>{t("footer.rights")}</p>
         <p className="max-[768px]:hidden">
           Designed & Built with ♥ by Genaro Duca
