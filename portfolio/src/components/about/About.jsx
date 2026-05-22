@@ -8,7 +8,7 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="glass-card flex gap-[60px] items-center px-[60px] py-[90px] text-[var(--text-color)] max-[768px]:flex-col max-[768px]:p-5 max-[768px]:gap-[10px]">
+    <div className="glass-card flex gap-[60px] items-center px-[60px] py-[90px] text-[var(--text-color)] max-[1080px]:flex-col max-[1080px]:p-5 max-[1080px]:gap-[10px]">
       {/* Foto */}
       <div className="shrink-0">
         <img
@@ -21,14 +21,12 @@ const About = () => {
       {/* Contenido */}
       <div className="flex flex-col gap-[40px] max-[768px]:gap-5">
         {/* Nombre */}
-        <p
-          className="font-bold text-[60px] text-left leading-[1] text-[var(--icon-color)] max-[768px]:text-[30px] max-[768px]:text-center"
-        >
+        <p className="font-bold text-[60px] text-left leading-[1] text-[var(--icon-color)] max-[768px]:text-[30px] max-[1080px]:text-center">
           {t("about.name")}
         </p>
 
         {/* Descripción */}
-        <p className="text-[16px] text-left leading-[1.5] max-[768px]:text-[14px] max-[768px]:text-justify max-[768px]:[hyphens:auto]">
+        <p className="text-[16px] text-left leading-[1.5] max-[768px]:text-[14px] max-[1080px]:text-justify max-[768px]:[hyphens:auto]">
           <Trans i18nKey="about.description">
             <span className="text-[var(--icon-color)] font-bold text-[16px] max-[768px]:text-[14px]">
               minimalist aesthetics
@@ -41,7 +39,7 @@ const About = () => {
         </p>
 
         {/* Botones */}
-        <div className="flex flex-row gap-5 max-[768px]:flex-col max-[768px]:gap-[10px]">
+        <div className="flex flex-row gap-5 max-[1080px]:flex-col max-[768px]:gap-[10px]">
           <a
             href="#services"
             className="self-center py-5 px-[40px] rounded-full bg-[var(--glow-3)] border-[1.5px] border-[var(--card-border)] font-bold text-[var(--icon-color)] cursor-pointer hover:-translate-y-[2px]"
