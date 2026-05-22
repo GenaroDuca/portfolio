@@ -72,8 +72,11 @@ function App() {
           <Header />
 
           <div className="flex flex-col items-center justify-center text-center py-12 px-5 max-[768px]:py-6">
-            <h1 className="text-[44px] font-extrabold tracking-tight leading-[1.25] max-w-[900px] text-center max-[768px]:text-[26px] bg-gradient-to-r from-[var(--icon-color)] via-[var(--glow-2)] to-[var(--icon-color)] bg-clip-text text-transparent select-none">
-              "{t("header.message")}"
+            <h1
+              className="text-[44px] font-extrabold tracking-tight leading-[1.25] max-w-[900px] text-center max-[768px]:text-[26px] bg-clip-text text-transparent select-none"
+              style={{ backgroundImage: "var(--slogan-gradient)" }}
+            >
+              “{t("header.message")}”
             </h1>
           </div>
 

@@ -6,6 +6,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
+import logo from "../../public/logo.PNG";
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -25,6 +27,9 @@ const Footer = () => {
           <p className="text-[14px] leading-relaxed opacity-80 max-w-[320px] max-[768px]:mx-auto">
             {t("footer.slogan")}
           </p>
+          <div className="flex flex-col items-center">
+            <img src={logo} alt="Logo" className="w-[80px]" />
+          </div>
         </div>
 
         {/* Quick Links Column */}
