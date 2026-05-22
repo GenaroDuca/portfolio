@@ -3,18 +3,18 @@ import { useTranslation } from "react-i18next";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="glass-card flex flex-col gap-10 p-[60px] text-[var(--text-color)] max-[768px]:p-6 max-[768px]:gap-8">
-      <div className="grid grid-cols-3 gap-12 max-[768px]:grid-cols-1 max-[768px]:gap-8 text-left">
+    <footer className="glass-card flex flex-col gap-10 p-[60px] text-[var(--text-color)] max-[768px]:p-6 max-[768px]:gap-8 ">
+      <div className="grid grid-cols-3 gap-12 max-[768px]:grid-cols-1 max-[768px]:gap-8 text-left max-[768px]:text-center">
         {/* Brand/Logo Column */}
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-4 max-[768px]:items-center">
+          <div className="flex flex-col gap-1 max-[768px]:items-center">
             <h3 className="font-bold text-[24px] text-[var(--icon-color)] tracking-tight leading-tight">
               {t("header.portfolio")}
             </h3>
@@ -22,17 +22,17 @@ const Footer = () => {
               {t("footer.brand_subtitle")}
             </p>
           </div>
-          <p className="text-[14px] leading-relaxed opacity-80 max-w-[320px]">
+          <p className="text-[14px] leading-relaxed opacity-80 max-w-[320px] max-[768px]:mx-auto">
             {t("footer.slogan")}
           </p>
         </div>
 
         {/* Quick Links Column */}
-        <div className="flex flex-col gap-4 max-[768px]:gap-2">
+        <div className="flex flex-col gap-4 max-[768px]:gap-2 max-[768px]:items-center">
           <h3 className="font-bold text-[16px] text-[var(--icon-color)] uppercase tracking-wider">
             {t("footer.links_title")}
           </h3>
-          <nav className="flex flex-col gap-3 text-[14px]">
+          <nav className="flex flex-col gap-3 text-[14px] max-[768px]:items-center">
             <a
               href="#"
               className="hover:text-[var(--icon-color)] transition-all duration-300 hover:translate-x-[2px] w-fit"
@@ -67,12 +67,12 @@ const Footer = () => {
         </div>
 
         {/* Contact Info Column */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 max-[768px]:items-center">
           <h3 className="font-bold text-[16px] text-[var(--icon-color)] uppercase tracking-wider">
             {t("footer.contact_title")}
           </h3>
-          <div className="flex flex-col gap-3 text-[14px] opacity-80">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col gap-3 text-[14px] opacity-80 max-[768px]:items-center">
+            <div className="flex items-center gap-2 max-[768px]:justify-center">
               <FaMapMarkerAlt className="text-[var(--icon-color)] shrink-0" />
               <span>{t("footer.location")}</span>
             </div>
@@ -82,7 +82,7 @@ const Footer = () => {
               rel="noreferrer"
               className="flex items-center gap-2 hover:text-[var(--icon-color)] transition-colors duration-300 w-fit"
             >
-              <FaWhatsapp className="text-[var(--icon-color)] shrink-0" />
+              <IoLogoWhatsapp className="text-[var(--icon-color)] shrink-0" />
               <span>+54 9 2284 515183</span>
             </a>
             <a
@@ -95,7 +95,7 @@ const Footer = () => {
           </div>
 
           {/* Social Icons row */}
-          <div className="flex gap-[12px] mt-2">
+          <div className="flex gap-[12px] mt-2 max-[768px]:justify-center">
             <a
               href="https://github.com/genaroduca"
               target="_blank"
